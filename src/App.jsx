@@ -45,8 +45,8 @@ function App() {
   const [image, setImage] = useState(images[0])
 
   const handlerSwitch = () => {
-    console.log(image)
-    image === images[0] ? setImage(images[1]) : setImage(imqges[0]);
+    console.log(image);
+    image === images[0] ? setImage(images[1]) : setImage(images[0]);
   }
 
   return (
