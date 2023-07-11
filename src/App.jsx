@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import IconSwitch from './components/IconSwitch'
-import CardsView from './components/CardsView'
-import ListView from './components/ListView';
+import Wrap from './components/Wrap'
+import Store from './components/Store';
 
 const products = [{
   name: "Nike Metcon 2",
@@ -37,26 +37,19 @@ const products = [{
 }];
 
 function App() {
-  const pathfile = 'D:/Нетология/задание 2 - События и состояние/answer/layout/src'
-  const images = [
-    { index: 0, img: "./cardImg.png" },
-    { index: 1, img: "./listImg.png"}
-  ]
-  const [image, setImage] = useState(images[0])
+  const [index, setIndex] = useState(0)
 
-  const handlerSwitch = () => {
-    console.log(image);
-    image === images[0] ? setImage(images[1]) : setImage(images[0]);
+  const handlerSwitch = (param) => {
+    console.log(param);
+    setIndex(param);
   }
 
   return (
     <>
-      <IconSwitch
-        icon={image.img}
-        onSwitch={() => {console.log("click 1"); handlerSwitch();}}/>
-      {/* <CardsView items={products} />
-      <ListView items={products}/> */}
-      {image === images[0] ? <CardsView items={products} /> : <ListView items={products}/>}
+      <IconSwitch class='icon-wrapper'
+        onSwitch={(param) => {console.log("click "+param); handlerSwitch(param);}}
+      />
+      <Wrap index={index} products={products} />
     </>
   )
 }

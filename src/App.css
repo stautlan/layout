@@ -41,6 +41,34 @@
   color: #888;
 }
 
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons'); */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  /* -moz-font-feature-settings: 'liga'; */
+  -moz-osx-font-smoothing: grayscale;
+}
+/* */
+.icon-wrapper {
+  padding: 20px;
+}
+
 .main {
   display: flex;
   width: 100%;
@@ -57,27 +85,21 @@
 .main .item img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+  box-shadow: 5px 5px 10px rgba(88, 88, 88, 0.5);
 }
 
-.main .item img:hover {
+/* .main .item img:hover {
   transform: scale(1.05);
-}
+} */
 
 .main-row .item-row {
-  /* align-items: center;
-  align-content: center;
-  align-items: stretch;
-  display: inline-block;
-  justify-content: center; 
-  flex-direction: row;
-  flex-direction: column; */
   text-align: left;
   width: 100%;
   margin-bottom: 5px;
 }
 
 .main-row .item-row img {
-  width: 50px;
+  width: 100px;
   position: relative;
 }
 
