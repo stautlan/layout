@@ -3,9 +3,9 @@ import ShopItem from './ShopItem'
 
 const ListView = ({items}) => {
   return (
-    <div className='main-row'>
-        {items.map((item, index) => (<ShopItem item={item} key={index}/>))}
-    </div>
+    <>
+        {items.map((item, index) => (<ShopItem item={item} key={item.name+index}/>))}
+    </>
   )
 }
 

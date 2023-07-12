@@ -2,15 +2,13 @@ import React from 'react'
 
 const ShopItem = ({item}) => {
     return (
-        <>
-        <div className='item-row'>
-            <img src={item.img} />
-            <span>{item.name}</span>
-            <span>{item.color}</span>
-            <span>${item.price}</span>
-            <button>ADD TO CARD</button>
+        <div className='shopItem__content'>
+          <img src={item.img} alt={item.name} className='shopItem__img' />
+          <div className="shopItem__name">{(item.name).toUpperCase()}</div>
+          <div className="shopItem__color">{item.color}</div>
+          <div className="shopItem__price">${item.price}</div>
+          <button className="shopItem__button btn">ADD TO CARD</button>
         </div>
-        </>
       )
 }
 

@@ -41,7 +41,7 @@
   color: #888;
 }
 
-/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons'); */
+/* IconSwitch */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -61,49 +61,88 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  /* -moz-font-feature-settings: 'liga'; */
+  -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
 }
-/* */
+
+
 .icon-wrapper {
-  padding: 20px;
+  text-align: right;
+  margin-bottom: 10px;
 }
 
-.main {
+.material-icons {
+  cursor: pointer;
+}
+
+/* card */
+.shopItem__content {
+  margin-top: 3px;
   display: flex;
-  width: 100%;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 0 15px;
 }
 
-.main .item {
+.shopItem__name, .shopCard__name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.shopItem__color, .shopCard__color {
+  font-size: 12px;
+  color: #808080;
+}
+
+.shopItem__img, .shopCard__img {
+  max-width: 100%;
+}
+
+.shopItem__img {
+  height: 100px;
+}
+
+.shopItem__price, .shopCard__price {
+  color: #ff0000;
+}
+
+.btn {
+  color: #ff0000;
+  background-color: transparent;
+  padding: 7px;
+  border-radius: 10px;
+  border: 1px solid #ff0000;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.cardsView {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shopCard {
+  box-sizing: border-box;
   width: 30%;
-  margin-bottom: 50px;
-  background: #f5f5f5;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 15px 10px;
+  margin-right: 5%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #808080;
 }
 
-.main .item img {
-  width: 100%;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 5px 5px 10px rgba(88, 88, 88, 0.5);
+.shopCard:nth-child(3n + 3) {
+  margin-right: 0;
 }
 
-/* .main .item img:hover {
-  transform: scale(1.05);
-} */
-
-.main-row .item-row {
-  text-align: left;
-  width: 100%;
-  margin-bottom: 5px;
+.shopCard:nth-child(n + 4) {
+  margin-top: 25px;
 }
 
-.main-row .item-row img {
-  width: 100px;
-  position: relative;
-}
-
-.main-row .item-row span {
-  width: 10px;
-  margin-left: 50px;
+.shopCard__footer {
+  display: flex;
+  justify-content: space-around;
 }
